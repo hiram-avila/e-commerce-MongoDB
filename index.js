@@ -21,6 +21,9 @@ app.use( cors());
 app.use(express.urlencoded({ extended: true }));
 
 //routes
+app.use('/', (req, res) => {
+    res.send('hola');
+});
 app.use('/usuarios',usuarioRoutes )
 app.use('/carrito',authMiddleware, cartRoutes )
 
