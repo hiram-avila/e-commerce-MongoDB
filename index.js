@@ -15,12 +15,10 @@ const app = express()
 app.use(cookieParser())
 const PORT = process.env.PORT || 4000
 
-//middlewares
 app.use(express.json())
 app.use( cors());
 app.use(express.urlencoded({ extended: true }));
 
-//routes
 app.use('/', (req, res) => {
     res.send('hola');
 });

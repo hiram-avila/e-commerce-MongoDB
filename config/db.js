@@ -8,7 +8,7 @@ const conectarDb = async( ) => {
         })
 
 
-        console.log('base de datos conectada')
+        console.log('BASE de datos conectada')
 
     } catch (error) {
         console.log(error)
