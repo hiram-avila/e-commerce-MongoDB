@@ -19,7 +19,6 @@ La API está construida utilizando Node.js y MongoDB, y está desplegada en una 
 ![image](https://github.com/user-attachments/assets/c71030a3-0201-40b2-8af1-9c91f695b461)
 
 
-
 - **Amazon API Gateway**: Para gestionar y exponer las API REST.
 - **Amazon EC2**: Instancia donde corre la aplicación Node.js en un contenedor Docker.
 - **Docker**: Para contenerizar la aplicación y asegurar la consistencia del entorno.
@@ -28,6 +27,9 @@ La API está construida utilizando Node.js y MongoDB, y está desplegada en una 
 - **Amazon CloudFront**: CDN para servir el contenido estático de manera eficiente.
 - **CI/CD**: Integración y despliegue continuo utilizando GitHub Actions.
 
+## Repositorio Font End
+https://github.com/hiram-avila/S3-AWS-e-commerce
+    
 ## Características
 
 - **Autenticación**: Implementada en Amazon API Gateway.
