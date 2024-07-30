@@ -27,7 +27,7 @@ La API está construida utilizando Node.js y MongoDB, y está desplegada en una 
 - **Amazon CloudFront**: CDN para servir el contenido estático de manera eficiente.
 - **CI/CD**: Integración y despliegue continuo utilizando GitHub Actions.
 
-## Repositorio Font End
+## Repositorio Front End
 https://github.com/hiram-avila/S3-AWS-e-commerce
     
 ## Características
