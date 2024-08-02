@@ -12,7 +12,7 @@ La API está construida utilizando Node.js y MongoDB, y está desplegada en una 
 ![EC2](https://img.shields.io/badge/Amazon_EC2-FF9900?style=for-the-badge&logo=amazon-ec2&logoColor=white)
 ![CloudFront](https://img.shields.io/badge/Amazon_CloudFront-DB7093?style=for-the-badge&logo=amazon-cloudfront&logoColor=white)
 ## Arquitectura
-![image](https://github.com/user-attachments/assets/627bfcff-2b2b-411b-ad22-e68dfcf682ab)
+![image](https://github.com/user-attachments/assets/4b0fde1f-6bf3-4206-a2ac-f38acab6cd4d)
 
 
 - **Amazon API Gateway**: Para gestionar y exponer las API REST.
