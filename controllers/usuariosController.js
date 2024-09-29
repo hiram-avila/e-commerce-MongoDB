@@ -39,12 +39,12 @@ const login = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Buscar el usuario en Redis primero
+   
     redisClient.get(email, async (err, data) => {
       if (err) throw err;
 
       if (data) {
-        // Si el usuario está en caché, obtenemos la información desde Redis
+        
         const usuario = JSON.parse(data);
         const passwordMatch = await bcrypt.compare(password, usuario.password);
 
@@ -56,7 +56,7 @@ const login = async (req, res) => {
 
         return res.status(200).json({ token, message: 'Inicio de sesión exitoso (desde caché)' });
       } else {
-        // Si el usuario no está en caché, buscamos en la base de datos
+        
         const usuario = await Usuario.findOne({ email });
 
         if (!usuario) {
@@ -69,7 +69,7 @@ const login = async (req, res) => {
           return res.status(401).json({ message: 'Credenciales inválidas, contraseña incorrecta' });
         }
 
-        // Guardar la información del usuario en Redis (con un TTL de 1 hora)
+        
         redisClient.setex(email, 3600, JSON.stringify(usuario));
 
         const token = jwt.sign({ userId: usuario._id }, process.env.JWT_secret, { expiresIn: '30d' });
