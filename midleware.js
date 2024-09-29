@@ -8,9 +8,8 @@ const authMiddleware = (req, res, next) => {
     }
   
     try {
-      // Verificar el token y extraer el payload
       const payload = jwt.verify(token, process.env.JWT_secret);
-      req.userId = payload.userId; // Agregar el ID del usuario al objeto de solicitud (req) para su uso posterior
+      req.userId = payload.userId; 
       next();
     } catch (error) {
       return res.status(403).json({ message: 'Token inválido' });

@@ -12,22 +12,22 @@ const registrar = async (req, res) => {
   }
 
   try {
-    const passwordHash = await bcrypt.hash(password, 10);
+      const passwordHash = await bcrypt.hash(password, 10);
 
-    const usuario = new Usuario({
-      email,
-      user,
-      password: passwordHash,
-    });
+      const usuario = new Usuario({
+        email,
+        user,
+        password: passwordHash,
+      });
 
-    await usuario.save();
+      await usuario.save();
 
-    redisClient.del(email);
+      redisClient.del(email);
 
-    res.json({
-      msg: 'Registro exitoso',
-      usuario,
-    });
+      res.json({
+        msg: 'Registro exitoso',
+        usuario,
+      });
 
   } catch (error) {
     console.error(error);
